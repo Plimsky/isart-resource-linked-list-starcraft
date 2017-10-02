@@ -13,8 +13,8 @@ struct s_zergSwarm
 
 // Constructor / Destructor
 
-t_spaceMarineArmy *constructorZergArmy(int total);
-void destructorZergArmy(t_spaceMarineArmy *this);
+t_zergSwarm *constructorZergSwarm(int total);
+void destructorZergSwarm(t_zergSwarm *this);
 
 // Actions
 
