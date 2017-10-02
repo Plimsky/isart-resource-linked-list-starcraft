@@ -1,4 +1,6 @@
+#include <managers/game_manager.h>
+
 int main()
 {
-	return 0;
+	return awakeGame();
 }
