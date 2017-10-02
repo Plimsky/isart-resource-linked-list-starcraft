@@ -6,6 +6,10 @@
 #define SPACE_MARINE_ARMY_NUMBER 100
 #define ZERG_SWARM_NUMBER 300
 
+// GLOBAL VARIABLE //
+t_game *GAME;
+////////////////////
+
 enum gameState
 {
 	PAUSE,
@@ -21,7 +25,5 @@ struct s_game
 	t_spaceMarineArmy *spaceMarineArmy;
 	t_zergSwarm *zergArmy;
 };
-
-t_game *GAME;
 
 #endif //TRAINING_GAME_DATA_H
