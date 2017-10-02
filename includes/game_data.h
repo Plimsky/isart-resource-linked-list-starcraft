@@ -20,7 +20,7 @@ enum gameState
 
 struct s_game
 {
-	static int countGame;
+	int countGame;
 	enum gameState state;
 	t_spaceMarineArmy *spaceMarineArmy;
 	t_zergSwarm *zergArmy;
