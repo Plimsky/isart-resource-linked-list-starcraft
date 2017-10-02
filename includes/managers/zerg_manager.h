@@ -18,9 +18,9 @@ void destructorZergSwarm(t_zergSwarm *this);
 
 // Actions
 
-void addZerg(t_zergSwarm *army, t_spaceMarine *spaceMarine, int total);
-void removeZerg(t_zergSwarm *army, t_spaceMarine *spaceMarine);
+void addZerg(t_zergSwarm *army, t_zerg *zerg, int total);
+void removeZerg(t_zergSwarm *army, t_zerg *zerg);
 void cleanSwarm(t_zergSwarm *army);
-bool isZergExist(t_zergSwarm *army, t_spaceMarine *spaceMarine);
+bool isZergExist(t_zergSwarm *army, t_zerg *zerg);
 
 #endif //TRAINING_ZERG_MANAGER_H
