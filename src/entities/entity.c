@@ -93,10 +93,10 @@ char *getEntityName(t_entity *this)
 	return this->name;
 }
 
-void getDamage(t_entity *entity, int attackValue)
+void getDamage(t_entity *this, int attackValue)
 {
-	entity->life -= attackValue;
+	this->life -= attackValue;
 
-	if (entity->life < 0)
-		entity->life = 0;
+	if (this->life < 0)
+		this->life = 0;
 }

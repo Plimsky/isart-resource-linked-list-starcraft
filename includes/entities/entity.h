@@ -21,6 +21,6 @@ void setEntityName(t_entity *this, const char *name);
 int getEntityLife(t_entity *this);
 char *getEntityName(t_entity *this);
 
-void getDamage(t_entity *entity, int attackValue);
+void getDamage(t_entity *this, int attackValue);
 
 #endif //TRAINING_ENTITY_H
