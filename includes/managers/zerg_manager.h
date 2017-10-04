@@ -18,7 +18,7 @@ void destructorZergSwarm(t_zergSwarm *this);
 
 // Actions
 
-void addZerg(t_zergSwarm *army, t_zerg *zerg, int total);
+void addZerg(t_zergSwarm *swarm, t_zerg *zerg, int total);
 void removeZerg(t_zergSwarm *army, t_zerg *zerg);
 void cleanSwarm(t_zergSwarm *army);
 bool isZergExist(t_zergSwarm *army, t_zerg *zerg);
