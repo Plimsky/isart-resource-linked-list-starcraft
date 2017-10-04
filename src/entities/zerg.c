@@ -70,7 +70,7 @@ void setZergEntity(t_zerg *this, t_entity *entity)
 
 void setZergArmor(t_zerg *this, t_armor *armor)
 {
-	if (this == NULL || armor == NULL)
+	if (this == NULL)
 		return;
 
 	this->armor = armor;
@@ -121,7 +121,10 @@ void printZergInfos(t_zerg *this)
 	if (this == NULL || this->entity == NULL)
 		return;
 
-	my_put_string("--- Name : ");
+	my_put_string("\n--- ID : ");
+	my_put_number(this->id);
+
+	my_put_string("\n--- Name : ");
 
 	if (this->entity->name == NULL)
 		my_put_string("Unknown");
