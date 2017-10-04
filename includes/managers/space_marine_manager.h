@@ -7,6 +7,7 @@
 struct s_spaceMarineArmy
 {
 	int total;
+	int maxId;
 	t_spaceMarine *head;
 	t_spaceMarine *tail;
 };
@@ -21,6 +22,6 @@ void destructorSpaceMarineArmy(t_spaceMarineArmy *this);
 void addSpaceMarine(t_spaceMarineArmy *army, t_spaceMarine *spaceMarine);
 void removeSpaceMarine(t_spaceMarineArmy *army, t_spaceMarine *spaceMarine);
 void cleanTroups(t_spaceMarineArmy *army);
-bool isSpaceMarineExist(t_spaceMarineArmy *army, t_spaceMarine *spaceMarine);
+bool isSpaceMarineExist(t_spaceMarineArmy *army, t_spaceMarine *spaceMarine, bool byPointer);
 
 #endif //TRAINING_SPACE_MARINE_MANAGER_H

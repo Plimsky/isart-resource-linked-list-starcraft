@@ -62,7 +62,7 @@ void setEntityName(t_entity *this, const char *name)
 	if (this == NULL || name == NULL)
 		return;
 
-	nameLength = (size_t) string_length(name);
+	nameLength = (size_t) string_length(name) + 1;
 
 	if (this->name == NULL)
 		this->name = (char *) malloc(sizeof(char) * nameLength);

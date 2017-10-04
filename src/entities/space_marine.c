@@ -7,6 +7,7 @@
 
 t_spaceMarine *constructorSpaceMarine(const char *name, int life)
 {
+	static int id;
 	t_spaceMarine *newSpaceMarine = (t_spaceMarine *) malloc(sizeof(t_spaceMarine));
 	t_entity *newEntity = constructorEntity();
 
@@ -16,7 +17,10 @@ t_spaceMarine *constructorSpaceMarine(const char *name, int life)
 	setEntityLife(newEntity, life);
 	setEntityName(newEntity, name);
 
-	setSpaceMarineId(newSpaceMarine, 0);
+	newSpaceMarine->previous = NULL;
+	newSpaceMarine->next = NULL;
+
+	setSpaceMarineId(newSpaceMarine, ++id);
 	setSpaceMarineEntity(newSpaceMarine, newEntity);
 	setSpaceMarineInventory(newSpaceMarine, NULL);
 
@@ -61,7 +65,7 @@ void setSpaceMarineEntity(t_spaceMarine *this, t_entity *entity)
 
 void setSpaceMarineInventory(t_spaceMarine *this, t_inventory *inventory)
 {
-	if (this == NULL || inventory == NULL)
+	if (this == NULL)
 		return;
 
 	this->inventory = inventory;
@@ -104,7 +108,10 @@ void printSpaceMarineInfos(t_spaceMarine *this)
 	if (this == NULL || this->entity == NULL)
 		return;
 
-	my_put_string("--- Name : ");
+	my_put_string("\n--- ID : ");
+	my_put_number(this->id);
+
+	my_put_string("\n--- Name : ");
 
 	if (this->entity->name == NULL)
 		my_put_string("Unknown");
